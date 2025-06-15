@@ -1,0 +1,147 @@
+{
+  "info": {
+    "name": "Talenavi Backend Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-1234567890ab"
+  },
+  "item": [
+    {
+      "name": "Create Todo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Meeting with client\",\n  \"assignee\": \"John Doe\",\n  \"due_date\": \"2025-06-20\",\n  \"time_tracked\": 0,\n  \"status\": \"pending\",\n  \"priority\": \"high\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Export Todo Excel",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/todos/export?title=meeting&status=pending,open",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "todos",
+            "export"
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "meeting"
+            },
+            {
+              "key": "status",
+              "value": "pending,open"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Chart by Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/chart?type=status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "chart"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "status"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Chart by Priority",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/chart?type=priority",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "chart"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "priority"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Chart by Assignee",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/chart?type=assignee",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "chart"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "assignee"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
