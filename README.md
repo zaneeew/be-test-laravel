@@ -26,3 +26,11 @@
 Untuk mempermudah pengujian API, gunakan file koleksi Postman berikut:
 Talenavi_Postman_Collection.json
 Silakan import file ini ke dalam Postman.
+
+### Result Test API
+
+-   ![alt text](image.png)
+-   ![alt text](image-1.png)
+-   ![alt text](image-2.png)
+-   ![alt text](image-3.png)
+-   ![alt text](image-4.png)
